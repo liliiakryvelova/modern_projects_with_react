@@ -11,11 +11,11 @@ export default function TodoList({ completedTodos, incompleteTodos }) {
             <NewTododForm />
             <h2>Incomplete Todos</h2>
             {incompleteTodos.map(todo => (
-                <TodoListItem key={todo.text} todo={todo} />
+                <TodoListItem key={todo.text} todo={todo} onDeleteClicked={onDeleteClicked} />
             ))}
             <h2>Completed Todos</h2>
             {completedTodos.map(todo => (
-                <TodoListItem key={todo.text} todo={todo} />
+                <TodoListItem key={todo.text} todo={todo} onCompletedClicked={onCompletedClicked} />
             ))}
         </div>
     )
